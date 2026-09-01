@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h1 class="mb-0 fs-3">Page de test</h1>
+                        <h1 class="mb-0 fs-3">Home Page</h1>
                     </div>
                 </div>
             </div>
