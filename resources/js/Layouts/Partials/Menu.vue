@@ -5,13 +5,6 @@
     <div class="sidebar-brand">
         <!--begin::Brand Link-->
         <a href="./index.html" class="brand-link">
-        <!--begin::Brand Image-->
-        <img
-            src="./assets/img/AdminLTELogo.png"
-            alt="AdminLTE Logo"
-            class="brand-image opacity-75 shadow"
-        />
-        <!--end::Brand Image-->
         <!--begin::Brand Text-->
         <span class="brand-text fw-light">AdminLTE 4</span>
         <!--end::Brand Text-->
@@ -59,17 +52,75 @@
             </ul>
             </li> -->
             <li class="nav-item">
-            <Link :href="route('home')" class="nav-link active">
+            <Link :href="route('home')" class="nav-link" :class="{ 'active' : $page.component == '/' }">
                 <i class="nav-icon bi bi-file-earmark"></i>
                 <p>Home</p>
             </Link>
             </li>
             <li class="nav-item">
-            <Link :href="route('contact')" class="nav-link">
+            <Link :href="route('niveauscolaire')" class="nav-link" :class="{ 'active' : $page.component == 'NiveauScolaire/Index' }">
                 <i class="nav-icon bi bi-palette"></i>
-                <p>Contact</p>
+                <p>Niveau Scolaire</p>
             </Link>
             </li>
+            <li class="nav-item" :class="{ 'active' : $page.component.startsWith('Etudiant/') }">
+            <a href="#" class="nav-link" :class="{ 'active' : $page.component.startsWith('Etudiant/') }">
+                <i class="nav-icon bi bi-people"></i>
+                <p>
+                Etudiant
+                <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                <Link :href="route('etudiant')" class="nav-link" :class="{ 'active' : $page.component == 'Etudiant/Index' }">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Tous</p>
+                </Link>
+                </li>
+                <li class="nav-item">
+                <Link :href="route('etudiant.create')" class="nav-link" :class="{ 'active' : $page.component == 'Etudiant/Create' }">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Nouveau</p>
+                </Link>
+                </li>
+                <!-- <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Dashboard v3</p>
+                </a>
+                </li> -->
+            </ul>
+            </li>
+            <!-- <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-speedometer"></i>
+                <p>
+                Niveau Scolaire
+                <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Dashboard v1</p>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="./index2.html" class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Dashboard v2</p>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Dashboard v3</p>
+                </a>
+                </li>
+            </ul>
+            </li> -->
             <!-- <li class="nav-item">
             <a href="#" class="nav-link">
                 <i class="nav-icon bi bi-box-seam-fill"></i>
