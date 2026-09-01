@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue'
 import inertia from '@inertiajs/vite'
 import VueDevTools from 'vite-plugin-vue-devtools'
+import path from 'path'
 
 export default defineConfig({
     plugins: [

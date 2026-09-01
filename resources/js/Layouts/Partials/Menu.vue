@@ -59,13 +59,13 @@
             </ul>
             </li> -->
             <li class="nav-item">
-            <Link :href="router(home)" class="nav-link active">
+            <Link :href="route('home')" class="nav-link active">
                 <i class="nav-icon bi bi-file-earmark"></i>
                 <p>Home</p>
             </Link>
             </li>
             <li class="nav-item">
-            <Link :href="router(contact)" class="nav-link">
+            <Link :href="route('contact')" class="nav-link">
                 <i class="nav-icon bi bi-palette"></i>
                 <p>Contact</p>
             </Link>
@@ -646,4 +646,5 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3'
+import { route } from 'ziggy-js'
 </script>
